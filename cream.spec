@@ -1,13 +1,14 @@
 Summary:	User-friendly face for Vim
+Summary(pl.UTF-8):	Przyjazny dla użytkownika interfejs do Vima
 Name:		cream
 Version:	0.38
 Release:	0.2
+License:	GPL v2
+Group:		Applications/Editors/Vim
 Source0:	http://dl.sourceforge.net/cream/%{name}-%{version}.tar.gz
 # Source0-md5:	3415244ec2d58139063d8ab2604d3bb6
 Source1:	%{name}.sh
 Source2:	%{name}.desktop
-License:	GPL v2
-Group:		Applications/Editors/Vim
 URL:		http://cream.sourceforge.net/
 Requires:	gvim
 BuildArch:	noarch
@@ -24,6 +25,20 @@ Microsoft, Unix and Apple format text editing, virtually unlimited
 file sizes, 38 varieties of 8-bit, 2-byte, and Unicode support,
 single/multiple document modes, unlimited undo/redo, show invisible
 characters, word count, and more.
+
+%description -l pl.UTF-8
+Cream to pozbawione trybów ubranie Vima w graficzny interfejs
+użytkownika. Zawiera wszystkie możliwości Vima z dodatkiem wielu
+własnych narzędzi. Skrócona lista możliwości obejmuje podświetlanie
+składni, sprawdzanie pisowni, wyszukiwanie i zastępowanie ciągów w
+wielu plikach, zakładki, podpowiedzi prototypów funkcji, makra,
+automatyczne zawijanie, reformatowanie, justowanie, znaczniki czasowe,
+eksplorator plików, dopełnianie, sortowanie, kalendarz, nawigację po
+znacznikach, komentowanie bloków, edycję tekstu w formacie Microsoftu,
+uniksowym i Apple'a, praktycznie nieograniczone rozmiary plików, 38
+wariacji kodowań 8-bitowych, 2-bajtowych i unikodowych, tryby pracy
+jedno- i wielodokumentowy, nieograniczone undo/redo, pokazywanie
+niewidocznych znaków, liczenie słów...
 
 %prep
 %setup -q
