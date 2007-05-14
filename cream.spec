@@ -3,9 +3,9 @@ Name:		cream
 Version:	0.38
 Release:	0.2
 Source0:	http://dl.sourceforge.net/cream/%{name}-%{version}.tar.gz
+# Source0-md5:	3415244ec2d58139063d8ab2604d3bb6
 Source1:	%{name}.sh
 Source2:	%{name}.desktop
-# Source0-md5:	3415244ec2d58139063d8ab2604d3bb6
 License:	GPL v2
 Group:		Applications/Editors/Vim
 URL:		http://cream.sourceforge.net/
