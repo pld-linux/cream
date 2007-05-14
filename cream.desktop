@@ -12,5 +12,4 @@ XClassHintResName=VIM
 MapNotify=false
 Encoding=UTF-8
 X-Desktop-File-Install-Version=0.9
-Categories=;
-
+Categories=GTK;GNOME;TextEditor;
