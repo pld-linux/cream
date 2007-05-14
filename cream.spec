@@ -1,14 +1,14 @@
 Summary:	User-friendly face for Vim
 Name:		cream
 Version:	0.38
-Release:	0.1
+Release:	0.2
 Source0:	http://dl.sourceforge.net/cream/%{name}-%{version}.tar.gz
+Source1:	%{name}.sh
+Source2:	%{name}.desktop
 # Source0-md5:	3415244ec2d58139063d8ab2604d3bb6
 License:	GPL v2
 Group:		Applications/Editors/Vim
 URL:		http://cream.sourceforge.net/
-BuildRequires:	ImageMagick
-BuildRequires:	desktop-file-utils
 Requires:	gvim
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -46,16 +46,10 @@ cp -a spelldicts/cream-spell-dict-eng-s*.vim $RPM_BUILD_ROOT%{_datadir}/vim/crea
 cp -a spelldicts/cream-spell-dict.vim $RPM_BUILD_ROOT%{_datadir}/vim/cream/spelldicts
 
 install -d $RPM_BUILD_ROOT%{_bindir}
-cp -a cream $RPM_BUILD_ROOT%{_bindir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 install -d $RPM_BUILD_ROOT%{_desktopdir}
-cp -a cream.desktop $RPM_BUILD_ROOT%{_desktopdir}
-
-# menu
-desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --add-category="TextEditor" \
-  --dir $RPM_BUILD_ROOT%{_desktopdir} $RPM_BUILD_ROOT%{_desktopdir}/*
+cp -a %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 # icons
 install %{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
