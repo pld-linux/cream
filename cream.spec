@@ -1,12 +1,12 @@
 Summary:	User-friendly face for Vim
 Summary(pl.UTF-8):	Przyjazny dla użytkownika interfejs do Vima
 Name:		cream
-Version:	0.38
+Version:	0.39
 Release:	1
 License:	GPL v2
 Group:		Applications/Editors/Vim
 Source0:	http://dl.sourceforge.net/cream/%{name}-%{version}.tar.gz
-# Source0-md5:	3415244ec2d58139063d8ab2604d3bb6
+# Source0-md5:	caef5e026c740b28c9d19eec4504d428
 Source1:	%{name}.sh
 Source2:	%{name}.desktop
 URL:		http://cream.sourceforge.net/
@@ -45,7 +45,7 @@ niewidocznych znaków, liczenie słów...
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/vim/cream/{addons,bitmaps,docs,docs-html,filetypes,help,spelldicts},%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_datadir}/vim/cream/{addons,bitmaps,docs,docs-html,filetypes,help},%{_pixmapsdir}}
 cp -a creamrc $RPM_BUILD_ROOT%{_datadir}/vim/cream
 cp -a *.vim $RPM_BUILD_ROOT%{_datadir}/vim/cream
 cp -a addons/*.vim $RPM_BUILD_ROOT%{_datadir}/vim/cream/addons
@@ -57,8 +57,6 @@ cp -a docs-html/*.html $RPM_BUILD_ROOT%{_datadir}/vim/cream/docs-html
 cp -a docs-html/*.png $RPM_BUILD_ROOT%{_datadir}/vim/cream/docs-html
 cp -a filetypes/*.vim $RPM_BUILD_ROOT%{_datadir}/vim/cream/filetypes
 cp -a help/*.txt $RPM_BUILD_ROOT%{_datadir}/vim/cream/help
-cp -a spelldicts/cream-spell-dict-eng-s*.vim $RPM_BUILD_ROOT%{_datadir}/vim/cream/spelldicts
-cp -a spelldicts/cream-spell-dict.vim $RPM_BUILD_ROOT%{_datadir}/vim/cream/spelldicts
 
 install -d $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_bindir}/%{name}
