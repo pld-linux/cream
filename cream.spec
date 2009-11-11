@@ -1,12 +1,12 @@
 Summary:	User-friendly face for Vim
 Summary(pl.UTF-8):	Przyjazny dla użytkownika interfejs do Vima
 Name:		cream
-Version:	0.41
+Version:	0.42
 Release:	1
 License:	GPL v2
 Group:		Applications/Editors/Vim
 Source0:	http://dl.sourceforge.net/cream/%{name}-%{version}.tar.gz
-# Source0-md5:	1cf71bb14cbe71c62bea598aaf699ed0
+# Source0-md5:	3a9a51c58b005a6466f3f70e015da38b
 Source1:	%{name}.sh
 Source2:	%{name}.desktop
 URL:		http://cream.sourceforge.net/
